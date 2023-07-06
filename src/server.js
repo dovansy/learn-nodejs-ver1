@@ -3,6 +3,7 @@ import configViewEngine from "./config/viewEngine";
 import initWebRoutes from "./route/web";
 import bodyParser from "body-parser";
 import dotENV from "dotenv";
+import connectDB from "./config/connectDB";
 
 dotENV.config();
 
@@ -21,6 +22,8 @@ app.use(
 configViewEngine(app);
 
 initWebRoutes(app);
+
+connectDB();
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);

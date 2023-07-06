@@ -1,3 +1,5 @@
+import { Sequelize } from "sequelize";
+
 let getHomePage = (req, res) => {
   return res.send("Home page controller");
 };
