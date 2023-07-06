@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  db:
+    image: mysql:latest
+    container_name: nodejs_ver1
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 12345
+      MYSQL_DATABASE: nodejs_base
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: admin
+    volumes:
+      - ./data:/var/lib/mysql
+    ports:
+      - "5001:3306"

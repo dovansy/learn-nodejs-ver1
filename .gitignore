@@ -2,6 +2,7 @@
 /vendor
 /.idea
 .idea/
+/data
 
 .env
 yarn.lock
