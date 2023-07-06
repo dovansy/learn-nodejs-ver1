@@ -1,5 +1,5 @@
 import express from "express";
-import configViewEngine from "./configs/viewEngine";
+import configViewEngine from "./config/viewEngine";
 import initWebRoutes from "./route/web";
 import bodyParser from "body-parser";
 import dotENV from "dotenv";
@@ -7,6 +7,7 @@ import dotENV from "dotenv";
 dotENV.config();
 
 const app = express();
+
 const port = process.env.PORT || 8080;
 
 app.use(bodyParser.json());
